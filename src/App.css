@@ -1,0 +1,209 @@
+:root {
+  --brand-blue: #0a4b78;
+  --brand-turquoise: #16bfb5;
+  --brand-orange: #ff8a3d;
+  --brand-light: #f5fbff;
+  --text-main: #1b2a34;
+}
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  color: var(--text-main);
+  background: radial-gradient(circle at top right, #dff8ff 0%, #ffffff 40%);
+}
+
+h1,
+h2,
+h3,
+.navbar-brand {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.92);
+}
+
+.hero {
+  min-height: 90vh;
+  background:
+    linear-gradient(115deg, rgba(10, 75, 120, 0.86), rgba(22, 191, 181, 0.62)),
+    url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80')
+      center / cover no-repeat;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.hero-badge,
+.offer-chip {
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.section-soft {
+  background-color: var(--brand-light);
+}
+
+.value-card,
+.destination-card,
+.testimonial-card,
+.trust-card {
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(3, 27, 45, 0.08);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.value-card:hover,
+.destination-card:hover,
+.testimonial-card:hover,
+.trust-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgba(3, 27, 45, 0.16);
+}
+
+.destination-card img {
+  height: 210px;
+  object-fit: cover;
+}
+
+.btn-cta {
+  background-color: var(--brand-orange);
+  border-color: var(--brand-orange);
+  color: #fff;
+}
+
+.btn-cta:hover,
+.btn-cta:focus {
+  background-color: #ff7722;
+  border-color: #ff7722;
+  color: #fff;
+}
+
+.btn-outline-light:hover {
+  color: var(--brand-blue);
+}
+
+.icon-circle {
+  width: 54px;
+  height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(22, 191, 181, 0.12);
+  color: var(--brand-blue);
+  font-size: 1.3rem;
+}
+
+.brand-logo {
+  border: 1px dashed rgba(10, 75, 120, 0.25);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  background: #fff;
+  font-weight: 700;
+  color: var(--brand-blue);
+}
+
+.section-title {
+  color: var(--brand-blue);
+}
+
+.urgent-strip {
+  background: linear-gradient(90deg, #ff8a3d, #ff5f5f);
+  color: #fff;
+}
+
+.floating-cta {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1040;
+}
+
+.icon-feature-card {
+  border: 0;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(3, 27, 45, 0.08);
+}
+
+.feature-icon {
+  font-size: 4rem;
+  color: var(--brand-blue);
+  line-height: 1;
+}
+
+.feature-title {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.feature-text {
+  font-size: 1.2rem;
+  color: #2f3a42;
+}
+
+.novedades-carousel .carousel-control-prev,
+.novedades-carousel .carousel-control-next {
+  width: 3rem;
+}
+
+.novedades-carousel .carousel-control-prev-icon,
+.novedades-carousel .carousel-control-next-icon {
+  background-color: rgba(10, 75, 120, 0.8);
+  border-radius: 50%;
+  background-size: 55% 55%;
+}
+
+.novedad-card {
+  position: relative;
+  border-radius: 0.75rem;
+  min-height: 340px;
+  box-shadow: 0 8px 20px rgba(10, 75, 120, 0.16);
+}
+
+.novedad-card img {
+  min-height: 340px;
+  object-fit: cover;
+}
+
+.novedad-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 38%, rgba(0, 0, 0, 0.72) 100%);
+}
+
+.novedad-overlay h3 {
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.65);
+}
+
+@media (max-width: 991px) {
+  .hero {
+    min-height: 85vh;
+  }
+
+  .feature-text {
+    font-size: 1.05rem;
+  }
+
+  .novedad-card,
+  .novedad-card img {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 575px) {
+  .feature-icon {
+    font-size: 3.2rem;
+  }
+
+  .feature-title {
+    font-size: 1.5rem;
+  }
+
+  .novedad-card,
+  .novedad-card img {
+    min-height: 260px;
+  }
+}
