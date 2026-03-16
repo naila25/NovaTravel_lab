@@ -144,6 +144,17 @@ h3,
   color: #2f3a42;
 }
 
+.contact-support {
+  border-top: 1px solid rgba(10, 75, 120, 0.16);
+  padding-top: 2.25rem;
+}
+
+.contact-brand {
+  min-height: 84px;
+  justify-content: flex-start;
+  cursor: default;
+}
+
 .novedades-carousel .carousel-control-prev,
 .novedades-carousel .carousel-control-next {
   width: 3rem;
@@ -205,5 +216,9 @@ h3,
   .novedad-card,
   .novedad-card img {
     min-height: 260px;
+  }
+
+  .contact-brand {
+    min-height: auto;
   }
 }

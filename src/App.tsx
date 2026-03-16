@@ -146,6 +146,24 @@ const novedadesItems = [
   },
 ]
 
+const socialContacts = [
+  {
+    icon: 'bi-whatsapp',
+    name: 'WhatsApp',
+    handle: '+51 999 888 777',
+  },
+  {
+    icon: 'bi-instagram',
+    name: 'Instagram',
+    handle: '@novatravel.oficial',
+  },
+  {
+    icon: 'bi-facebook',
+    name: 'Facebook',
+    handle: 'NovaTravel Agencia',
+  },
+]
+
 const chunkItems = <T,>(items: T[], size: number): T[][] => {
   const chunks: T[][] = []
   for (let i = 0; i < items.length; i += size) {
@@ -191,6 +209,11 @@ function App() {
                 <li className="nav-item">
                   <a className="nav-link" href="#suscripcion">
                     Suscribete
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#contacto">
+                    Contacto
                   </a>
                 </li>
                 <li className="nav-item ms-lg-2 mt-2 mt-lg-0">
@@ -254,7 +277,8 @@ function App() {
             <div className="text-center mb-4">
               <h2 className="section-title fw-bold">Por que elegir NovaTravel</h2>
               <p className="text-secondary mb-0">
-                Una propuesta clara para que tomes la mejor decision en minutos.
+                Conocenos: somos una agencia de viajes enfocada en brindar asesoria cercana,
+                itinerarios personalizados y acompanamiento real en cada etapa de tu viaje.
               </p>
             </div>
             <div className="row g-4">
@@ -494,38 +518,33 @@ function App() {
                 </article>
               </div>
             </div>
+
+            <div id="contacto" className="contact-support mt-5">
+              <div className="text-center mb-4">
+                <h3 className="section-title fw-bold mb-2">Tambien puedes contactarnos</h3>
+                <p className="text-secondary mb-0">
+                  Si prefieres, escribenos por WhatsApp o en nuestras redes oficiales.
+                </p>
+              </div>
+              <div className="row g-3 text-center">
+                {socialContacts.map((item) => (
+                  <div className="col-12 col-md-4" key={item.name}>
+                    <div className="brand-logo contact-brand d-flex align-items-center gap-2">
+                      <span className="d-inline-flex align-items-center gap-2">
+                        <i className={`bi ${item.icon} fs-5`} aria-hidden="true"></i>
+                        <span>
+                          <strong className="d-block text-start">{item.name}</strong>
+                          <small className="d-block text-start text-secondary">{item.handle}</small>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
-        <section className="py-5 section-soft" id="confianza">
-          <div className="container">
-            <div className="text-center mb-4">
-              <h2 className="section-title fw-bold">Confianza y aliados</h2>
-              <p className="text-secondary mb-0">
-                Trabajamos con socios reconocidos para garantizar calidad.
-              </p>
-            </div>
-            <div className="row g-3 align-items-center text-center">
-              <div className="col-6 col-md-3">
-                <div className="brand-logo">SkyWorld Airlines</div>
-              </div>
-              <div className="col-6 col-md-3">
-                <div className="brand-logo">Oceanic Air</div>
-              </div>
-              <div className="col-6 col-md-3">
-                <div className="brand-logo">Hotelia Group</div>
-              </div>
-              <div className="col-6 col-md-3">
-                <div className="brand-logo">Global Tours</div>
-              </div>
-            </div>
-            <div className="text-center mt-4">
-              <a href="#formulario" className="btn btn-cta">
-                Suscribete y recibe ofertas exclusivas
-              </a>
-            </div>
-          </div>
-        </section>
       </main>
 
       <footer className="py-4 bg-dark text-white-50">
