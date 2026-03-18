@@ -554,9 +554,6 @@ function App() {
         </div>
       </footer>
 
-      <a href="#formulario" className="btn btn-cta floating-cta">
-        Reserva ahora
-      </a>
     </>
   )
 }
